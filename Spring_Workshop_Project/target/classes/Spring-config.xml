@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <!-- 1st Bean JavaTrainer -->
+       
+    <bean class="com.org.entity.JavaTrainer" id="adJavaTrainer">
+   <constructor-arg name="name" value="Jill"/>
+    <constructor-arg name="modules"> 
+    <list>
+    <value>Servlet</value>
+    <value>Hibernate</value>
+    <value>Spring</value>
+    </list>
+    </constructor-arg> 
+  </bean>
+  
+ <!-- 2nd Bean MetInfoTech -->
+  
+  <bean class="com.org.entity.MetInfoTech" id="metInfo">
+  
+  <property name="trainer" ref="adJavaTrainer"></property>
+   </bean>
+   
+   
+   <!-- 3rd Bean JavaWorkshop -->
+   
+   <bean class="com.org.entity.JavaWorkshop" id="adJavaWorkshop">
+   <constructor-arg name="company" ref="metInfo"/>
+   </bean>
+
+</beans>
