@@ -9,4 +9,24 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>MyGreetingServlet</display-name>
+    <servlet-name>MyGreetingServlet</servlet-name>
+    <servlet-class>example.servlet.GreetingServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyGreetingServlet</servlet-name>
+    <url-pattern>/greet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>example.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
